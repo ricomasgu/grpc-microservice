@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package app;
+
+service CoordinatesController {
+  rpc AddCoordinates (Coordinates) returns (ResDB);
+}
+
+message Coordinates {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message ResDB {
+  string res = 1;
+}
